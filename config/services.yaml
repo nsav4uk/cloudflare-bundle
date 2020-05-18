@@ -1,0 +1,15 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  nsav4uk\CloudflareBundle\:
+    resource: '../src/*'
+    exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+  nsav4uk\CloudflareBundle\Service\CloudflareClient:
+    arguments:
+      - "%cloudflare.email%"
+      - "%cloudflare.api_key%"

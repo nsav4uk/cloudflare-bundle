@@ -1,0 +1,46 @@
+{
+  "name": "nsav4uk/cloudflare-bundle",
+  "version": "0.0.1",
+  "type": "symfony-bundle",
+  "description": "Symfony Bundle for Cloudflare PHP API Binding",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Nikolay Savchuk",
+      "email": "savchuk.nikolay@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-json": "*",
+    "php": "^7.2.5",
+    "cloudflare/sdk": "^1.1.5",
+    "symfony/console": "^5.0",
+    "symfony/http-kernel": "^5.0",
+    "symfony/yaml": "^5.0"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "nsav4uk\\CloudflareBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "nsav4uk\\CloudflareBundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test" : "./vendor/bin/simple-phpunit"
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": false,
+      "require": "5.0.*"
+    }
+  }
+}
